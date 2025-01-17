@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        #app {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8eaf6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Interesting Facts About Trees</h1>
+        <ul id="facts-list"></ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const facts = [
+                {
+                    "fact": "Diversity",
+                    "description": "There are over 60,000 known species of trees worldwide, each adapted to different climates and environments."
+                },
+                {
+                    "fact": "Photosynthesis",
+                    "description": "Trees play a crucial role in the Earth's ecosystem by converting carbon dioxide into oxygen through the process of photosynthesis, which is essential for life on Earth."
+                },
+                {
+                    "fact": "Oldest Trees",
+                    "description": "The oldest known living tree is a Great Basin bristlecone pine (Pinus longaeva) named Methuselah, located in California, and is over 4,800 years old."
+                },
+                {
+                    "fact": "Tallest Trees",
+                    "description": "The tallest trees in the world are coast redwoods (Sequoia sempervirens), with the tallest known specimen, named Hyperion, reaching a height of over 379 feet (115.5 meters)."
+                },
+                {
+                    "fact": "Carbon Storage",
+                    "description": "Trees are vital for carbon storage, as they absorb carbon dioxide from the atmosphere and store it in their biomass, helping to mitigate climate change."
+                },
+                {
+                    "fact": "Habitat",
+                    "description": "Trees provide habitat and food for a wide variety of wildlife, including birds, insects, mammals, and fungi, contributing to biodiversity."
+                },
+                {
+                    "fact": "Water Cycle",
+                    "description": "Trees play a significant role in the water cycle by absorbing water from the soil and releasing it into the atmosphere through a process called transpiration."
+                },
+                {
+                    "fact": "Medicinal Uses",
+                    "description": "Many trees have medicinal properties and have been used in traditional medicine for centuries. For example, the bark of the willow tree is a source of salicylic acid, the active ingredient in aspirin."
+                },
+                {
+                    "fact": "Cultural Significance",
+                    "description": "Trees hold cultural and spiritual significance in many societies. For example, the Bodhi tree is sacred in Buddhism as it is believed to be the tree under which Siddhartha Gautama attained enlightenment."
+                },
+                {
+                    "fact": "Economic Value",
+                    "description": "Trees are economically important as they provide timber, paper, fruits, nuts, and other products. They also contribute to tourism and recreation industries through forests and parks."
+                }
+            ];
+
+            const factsList = document.getElementById('facts-list');
+
+            facts.forEach(fact => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${fact.fact}:</strong> ${fact.description}`;
+                factsList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>
